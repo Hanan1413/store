@@ -1,8 +1,10 @@
 import React from 'react'
-import {Hero} from '../components'
+import {FeaturedProducts, Hero} from '../components'
 import {customFetch} from '../utils'
 
 const url = '/products?featured=true';
+
+// loader يحمل البيانات من الـ API.
 
 export const loader = async () =>{
   const response = await customFetch(url);
@@ -15,6 +17,7 @@ const Landing = () => {
   return (
     <>
     <Hero />
+    <FeaturedProducts />
     </>
   )
 }
